@@ -1,0 +1,21 @@
+{
+  "name": "github-actions-lunch-learn",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --collectCoverage",
+    "lint": "eslint . --ext .js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@jest/types": "^27.2.5",
+    "@types/jest": "^27.0.2",
+    "jest": "^27.3.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.0.1",
+    "eslint-config-google": "^0.14.0"
+  }
+}
