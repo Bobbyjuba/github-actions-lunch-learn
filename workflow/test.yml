@@ -1,0 +1,22 @@
+name: Testing Code
+on: push
+jobs:
+  run-linters:
+    name: Testing using Jest
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out Git repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12
+
+      # Jest must be in `package.json`
+      - name: Install Node.js dependencies
+        run: npm ci
+
+      - name: Run Jest
+        run: npm run test
