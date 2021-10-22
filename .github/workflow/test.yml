@@ -3,7 +3,10 @@ on: push
 jobs:
   run-testing:
     name: Testing
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
+    strategy:
+      os: [ubuntu-latest, windows-latest, macOS-latest]
+      node: [10, 12, 14]
 
     steps:
       - name: Check out Git repository
@@ -12,7 +15,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v1
         with:
-          node-version: 12
+          node-version: ${{ matrix.node }}
 
       # Jest must be in `package.json`
       - name: Install Node.js dependencies

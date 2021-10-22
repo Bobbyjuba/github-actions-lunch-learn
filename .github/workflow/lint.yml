@@ -1,5 +1,8 @@
 name: Code Linting
-on: push
+on:
+  push:
+    branches:
+      - master
 jobs:
   run-linting:
     name: Linting
