@@ -1,8 +1,8 @@
 name: Code Linting
 on: push
 jobs:
-  run-linters:
-    name: Run linters
+  run-linting:
+    name: Linting
     runs-on: ubuntu-latest
 
     steps:

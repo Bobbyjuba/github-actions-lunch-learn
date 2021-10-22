@@ -1,8 +1,8 @@
 name: Testing Code
 on: push
 jobs:
-  run-linters:
-    name: Testing using Jest
+  run-testing:
+    name: Testing
     runs-on: ubuntu-latest
 
     steps:
